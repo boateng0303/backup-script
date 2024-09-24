@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    triggers {
-        cron('*/5 * * * *')  // Schedule to run every 5 minutes
-    }
+    // triggers {
+    //     cron('*/5 * * * *')  // Schedule to run every 5 minutes
+    // }
 
     stages {
         stage('Backup') {
