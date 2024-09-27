@@ -14,6 +14,15 @@ pipeline {
                 }
             }
         }
+
+        stage('Cleanup') {
+            steps {
+                script {
+                    // Command to remove temporary jobs or files (e.g., jobs ending with @tmp)
+                    sh "rm -rf /opt/backup/backup_${DATE}/*@tmp"
+                }
+            }
+        }
     }
 
     post {
